@@ -9,18 +9,19 @@ bot.on('message', function(message){
 
         var chatID = message.chat.id;
 
-        var cuatroletras = message.text.substring(message.text.length - 4);
-        var tresletras = message.text.substring(message.text.length - 3);
+        var unaletra = message.text.substring(message.text.length - 1);
         var dosletras =  message.text.substring(message.text.length - 2);
+        var tresletras = message.text.substring(message.text.length - 3);
+        var cuatroletras = message.text.substring(message.text.length - 4);
         var seisletras = message.text.substring(message.text.length - 6);
         var sieteletras = message.text.substring(message.text.length - 7);
 
 
-        if (cuatroletras == 'inco') {
+        if (cuatroletras == 'inco' || unaletra == '5') {
             
             bot.sendMessage(chatID, 'por el culo te la hinco');
     
-        } else if (cuatroletras == 'ocho'){
+        } else if (cuatroletras == 'ocho' || unaletra == '8'){
             
             bot.sendMessage(chatID, 'por el culo te la esmocho');
     
@@ -103,6 +104,10 @@ bot.on('message', function(message){
         } else if (seisletras == 'papope') {
 
             bot.sendMessage(chatID, 'paparapa pa pa pa');
+
+        } else if (message.text == 'eyo fiolo') {
+
+            bot.sendMessage(chatID, 'resa fiolo');
 
         }
     }
