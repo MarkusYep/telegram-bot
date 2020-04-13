@@ -16,8 +16,11 @@ bot.on('message', function(message){
         var seisletras = message.text.substring(message.text.length - 6);
         var sieteletras = message.text.substring(message.text.length - 7);
 
-
-        if (cuatroletras == 'inco' || unaletra == '5') {
+        if (message.text.includes('un lol')) {
+            
+            bot.sendMessage(chatID, 'pa que eres un puto friki de mierda retrasado de los cojones hijo de puta subnormal');
+    
+        } else if (cuatroletras == 'inco' || unaletra == '5') {
             
             bot.sendMessage(chatID, 'por el culo te la hinco');
     
@@ -108,6 +111,14 @@ bot.on('message', function(message){
         } else if (message.text == 'eyo fiolo') {
 
             bot.sendMessage(chatID, 'resa fiolo');
+
+        } else if (tresletras == 'ano') {
+
+            bot.sendMessage(chatID, 'me la agarras con la mano');
+
+        } else if (tresletras == 'ado') {
+
+            bot.sendMessage(chatID, 'el que tengo aqui colgado');
 
         }
     }
