@@ -4,6 +4,11 @@ const TelegramBot = require('node-telegram-bot-api');
 const token = '804204970:AAHc9jwFoIPFHwmgipRo4WMli7w-jHxT-Gs';
 const bot = new TelegramBot(token, {polling: true});
 
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+  console.log('Listening on port', port);
+});
+
 bot.on('message', function(message){
 
 
