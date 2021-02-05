@@ -2,7 +2,11 @@ process.env.NTBA_FIX_319 = 1;
 
 const TelegramBot = require('node-telegram-bot-api');
 const token = '804204970:AAEEUJkKCfmX_fiQxGicdgiOSaLWla2l9WM';
-const bot = new TelegramBot(token, {polling: true});
+const bot = new TelegramBot(token);
+
+if(bot.isPolling()) {
+    await bot.stopPolling();
+}
     
 await bot.startPolling();
 
